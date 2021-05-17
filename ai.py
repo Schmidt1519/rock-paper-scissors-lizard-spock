@@ -6,6 +6,13 @@ class AI(Player):
         super().__init__()
 
 
-        # set default AI name
+    player = Player()
+    player.name = "The Bot"
 
+
+    def set_name(self):
+        self.name = "The Bot"
+        return self.name
+
+    # def
         # choose gesture with random
