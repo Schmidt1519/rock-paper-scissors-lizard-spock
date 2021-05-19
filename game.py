@@ -116,6 +116,8 @@ class Game:
                 print(f'{self.player_two.name} wins. (else print)')  # test. remove "else print"
                 self.player_two.score += 1
 
+            print(f'\nScoreboard: {self.player_one.name}: {self.player_one.score}.  {self.player_two.name}: {self.player_two.score}.')
+            print('\nNext Round:\n')
 
     def display_winner(self):
         if self.player_one.score >= 2:
