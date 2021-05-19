@@ -9,7 +9,7 @@ class Game:
     def __init__(self):
         self.player_one = Human()
         self.player_two = Human() or AI()
-
+        player = Player()
 
     def run_game(self):
         # self.welcome_message()
@@ -63,26 +63,41 @@ class Game:
             self.player_one.choose_gesture()
             self.player_two.choose_gesture()
 
-            if self.player_one.chosen_gesture == self.player.gestures[0] and self.player_two.chosen_gesture == self.player.gestures[2]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[2] and self.player_two.chosen_gesture == self.player.gestures[1]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[1] and self.player_two.chosen_gesture == self.player.gestures[0]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[0] and self.player_two.chosen_gesture == self.player.gestures[3]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[3] and self.player_two.chosen_gesture == self.player.gestures[4]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[4] and self.player_two.chosen_gesture == self.player.gestures[2]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[2] and self.player_two.chosen_gesture == self.player.gestures[3]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[3] and self.player_two.chosen_gesture == self.player.gestures[1]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[1] and self.player_two.chosen_gesture == self.player.gestures[4]:
-                self.player_one.score += 1
-            if self.player.one.chosen_gesture == self.player.gestures[4] and self.player_two.chosen_gesture == self.player.gestures[0]:
-                self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[0] and self.player_two.chosen_gesture == self.player_two.gestures[2]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[2] and self.player_two.chosen_gesture == self.player_two.gestures[1]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[1] and self.player_two.chosen_gesture == self.player_two.gestures[0]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[0] and self.player_two.chosen_gesture == self.player_two.gestures[3]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[3] and self.player_two.chosen_gesture == self.player_two.gestures[4]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[4] and self.player_two.chosen_gesture == self.player_two.gestures[2]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[2] and self.player_two.chosen_gesture == self.player_two.gestures[3]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[3] and self.player_two.chosen_gesture == self.player_two.gestures[1]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[1] and self.player_two.chosen_gesture == self.player_two.gestures[4]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            if self.player_one.chosen_gesture == self.player_one.gestures[4] and self.player_two.chosen_gesture == self.player_two.gestures[0]:
+               print(f'{self.player_one.name} wins.')
+               self.player_one.score += 1
+            else:
+                print(f'{self.player_two.name} wins.')
+                self.player_two.score += 1
+
+
 
 
     def display_winner(self):
