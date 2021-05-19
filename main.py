@@ -13,4 +13,4 @@ if __name__ == '__main__':
     # player = Player()         # test
     # player.choose_gesture()   # test
 
-print("\nGame Over.")
+print("Game Over.")
