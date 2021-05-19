@@ -1,6 +1,5 @@
 import ai
 import human
-from player import Player
 from human import Human
 from ai import AI
 
@@ -8,8 +7,7 @@ from ai import AI
 class Game:
     def __init__(self):
         self.player_one = Human()
-        self.player_two = Human() or AI()
-        # player = Player()
+        self.player_two = None
 
     def run_game(self):
         self.welcome_message()
@@ -41,22 +39,22 @@ class Game:
             if game_type == 1:
                 self.player_two = Human()
                 self.player_one.name = human.Human.set_name(self)
-                print(f'Hello {self.player_one.name}.')  # test. remove.
+                print(f'Hello {self.player_one.name}.')
                 self.player_two.name = human.Human.set_name(self)
-                print(f'Hello {self.player_two.name}.')  # test. remove.
+                print(f'Hello {self.player_two.name}.')
                 print(f'{self.player_one.name} vs {self.player_two.name}.')
                 break
             elif game_type == 2:
                 self.player_two = AI()
                 self.player_one.name = human.Human.set_name(self)
-                print(f'Hello {self.player_one.name}.')  # test. remove.
+                print(f'Hello {self.player_one.name}.')
                 self.player_two.name = ai.AI.set_name(self)
-                print(f'Hello {self.player_two.name}.')  # test. remove.
+                print(f'Hello {self.player_two.name}.')
                 print(f'{self.player_one.name} vs {self.player_two.name}.')
                 break
 
 
-    def game_round(self):  # Loop until one side wins best of 3
+    def game_round(self):
         while self.player_one.score < 2 and self.player_two.score < 2:
             if self.player_one.score >= 2 or self.player_two.score >= 2:
                 self.display_winner()
