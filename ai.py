@@ -17,5 +17,5 @@ class AI(Player):
     def choose_gesture(self):
         print(f'Choose your gesture: {self.gestures[0]}, {self.gestures[1]}, {self.gestures[2]}, {self.gestures[3]}, or {self.gestures[4]}')
         self.chosen_gesture = random.choice(self.gestures)
-        print(f'{self.name} chooses {self.chosen_gesture}')
+        print(f'{self.name} chooses {self.chosen_gesture}.')
         return self.chosen_gesture
