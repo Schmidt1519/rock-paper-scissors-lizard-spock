@@ -8,7 +8,6 @@ class Player:
 
     def set_name(self):
         self.name = input("Enter player name?")
-        return self.name
 
 
     def choose_gesture(self):
@@ -16,6 +15,5 @@ class Player:
         if chosen_gesture in self.gestures:
             self.chosen_gesture = chosen_gesture
             print(f'{self.name} chooses {self.chosen_gesture}.')
-            return self.chosen_gesture
         else:
             self.choose_gesture()
