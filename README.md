@@ -1,3 +1,5 @@
-# rock-paper-scissors-lizard-spock
+# Rock Paper Scissors Lizard Spock
+Rock Paper Scissors Lizard Spock console game using OOP concepts, including inheritance. Player vs Player or Player vs AI.
 
-dCC project of creating Rock Paper Scissors Lizard Spock console version game using OOP concepts, including inheritance. Player vs Player or Player vs AI.
+## Technologies
+* Python
